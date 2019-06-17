@@ -15,3 +15,4 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+ Ce dossier doit contenir toutes les librairies externes utilisées par votre plugin.
