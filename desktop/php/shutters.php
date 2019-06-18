@@ -27,7 +27,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
     <section class="content-header" style="top: 50px; padding-right: 65px;">
         <div class="action-bar scroll-shadow">
             <div class="action-group">
-                <a class="btn btn-danger btn-action-bar" href="index.php?v=d&amp;p=administration"><i class="fas fa-chevron-left spacing-right"></i>Retour</a>
+                <a class="btn btn-danger btn-action-bar" href="index.php?v=d&amp;p=plugin"><i class="fas fa-chevron-left spacing-right"></i>Retour</a>
                 <a class="btn btn-success btn-action-bar eqLogicAction" id="bt_addEqLogic" data-action="add"><i class="fas fa-plus-circle spacing-right"></i>Ajouter</a>
             </div>
             <div class="action-group">
@@ -37,30 +37,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
     </section>
     <section class="content" style="padding-top: 80px;">
         <div class="row row-overflow">
-            <div class="col-lg-2 col-md-3 col-sm-4">
-                <div class="bs-sidebar">
-                    <ul id="ul_eqLogic" class="nav nav-list bs-sidenav">
-                        <a class="btn btn-default eqLogicAction" style="width : 100%;margin-top : 5px;margin-bottom: 5px;"
-                        data-action="add">
-                            <i class="fa fa-plus-circle"></i> {{Ajouter un objet}}
-                        </a>
-                        <li class="filter" style="margin-bottom: 5px;">
-                            <input class="filter form-control input-sm" placeholder="{{Rechercher}}" style="width: 100%"/>
-                        </li>
-                        <?php
-                        foreach ($eqLogics as $eqLogic) {
-                            $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
-                            echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '" style="' . $opacity . '"><a>' . $eqLogic->getHumanName(true) . '</a></li>';
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
 
             <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay"
                 style="border-left: solid 1px #EEE; padding-left: 25px;">
-                <legend>{{Mes Objets}}</legend>
-                <legend><i class="fa fa-cog"></i> {{Gestion}}</legend>
                 <legend><i class="fa fa-table"></i> {{Mes shutterss}}</legend>
                 <div class="eqLogicThumbnailContainer">
                     <?php
