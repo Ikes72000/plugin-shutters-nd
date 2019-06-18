@@ -31,9 +31,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 <a class="btn btn-success btn-action-bar eqLogicAction" id="bt_addEqLogic" data-action="add"><i class="fas fa-plus-circle spacing-right"></i>Ajouter</a>
             </div>
             <div class="action-group">
-                <a class="btn btn-primary btn-action-bar pull-right" id="bt_logrealtimedownloadLog"><i class="fas fa-cloud-download-alt spacing-right"></i>Télécharger</a>
-                <a class="btn btn-warning btn-action-bar pull-right" id="bt_logrealtimeclearLog"><i class="fas fa-times spacing-right"></i>Vider</a>
-                <a class="btn btn-danger btn-action-bar pull-right" id="bt_logrealtimeremoveLog"><i class="fas fa-trash-alt spacing-right"></i>Supprimer</a>
+                <a class="btn btn-default btn-action-bar eqLogicAction" id="bt_gotoPluginConf" data-action="gotoPluginConf"><i class="fas fa-cog spacing-right"></i>Configuration</a>
             </div>
         </div>
     </section>
@@ -63,20 +61,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 style="border-left: solid 1px #EEE; padding-left: 25px;">
                 <legend>{{Mes Objets}}</legend>
                 <legend><i class="fa fa-cog"></i> {{Gestion}}</legend>
-                <div class="eqLogicThumbnailContainer">
-                    <div class="cursor eqLogicAction" data-action="add"
-                        style="text-align: center; background-color : #ffffff; height : 120px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;">
-                        <i class="fa fa-plus-circle" style="font-size : 6em;color:#94ca02;"></i>
-                        <br>
-                        <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02">{{Ajouter}}</span>
-                    </div>
-                    <div class="cursor eqLogicAction" data-action="gotoPluginConf"
-                        style="text-align: center; background-color : #ffffff; height : 120px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;">
-                        <i class="fa fa-wrench" style="font-size : 6em;color:#767676;"></i>
-                        <br>
-                        <span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#767676">{{Configuration}}</span>
-                    </div>
-                </div>
                 <legend><i class="fa fa-table"></i> {{Mes shutterss}}</legend>
                 <div class="eqLogicThumbnailContainer">
                     <?php
