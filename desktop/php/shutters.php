@@ -35,6 +35,19 @@ $eqLogics = eqLogic::byType($plugin->getId());
             </div>
         </div>
     </section>
+
+    <section class="content">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title"><i class="fas fa-clone"></i>{{ 'Objets' }}</h3>
+            </div>
+            <div class="box-body">
+           </div>
+        </div>
+        <div class="objectListContainer row">
+        </div>
+    </section>
+<
     <section class="content" style="padding-top: 80px;">
         <div class="row row-overflow">
 
