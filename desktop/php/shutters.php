@@ -28,7 +28,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
         <div class="action-bar scroll-shadow">
             <div class="action-group">
                 <a class="btn btn-danger btn-action-bar" href="index.php?v=d&amp;p=administration"><i class="fas fa-chevron-left spacing-right"></i>Retour</a>
-                <a class="btn btn-success btn-action-bar" id="bt_addEqLogic" data-action="add"><i class="fas fa-plus-circle spacing-right"></i>Ajouter</a>
+                <a class="btn btn-success btn-action-bar eqLogicAction" id="bt_addEqLogic" data-action="add"><i class="fas fa-plus-circle spacing-right"></i>Ajouter</a>
             </div>
             <div class="action-group">
                 <a class="btn btn-primary btn-action-bar pull-right" id="bt_logrealtimedownloadLog"><i class="fas fa-cloud-download-alt spacing-right"></i>Télécharger</a>
