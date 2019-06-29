@@ -49,7 +49,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 foreach ($eqLogics as $eqLogic) {
                     $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
                     echo '<div class="col-lg-1 col-md-2 col-sm-2 col-xs-4">';
-                    echo '<div class="box objectDisplayCard w-icons" style="border-top:3px solid" data-eqLogic_id="' . $eqLogic->getId() . '"data-object_name="' . $eqLogic->getHumanName(true, true) . '>';
+                    echo '<div class="box eqLogicDisplayCard w-icons" style="border-top:3px solid" data-eqLogic_id="' . $eqLogic->getId() . '"data-object_name="' . $eqLogic->getHumanName(true, true) . '>';
                     echo '<a class="box-header with-border cursor">';
                     echo '</a>';
                     echo '<div class="box-body">';
