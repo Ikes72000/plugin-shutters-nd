@@ -42,27 +42,27 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 <h3 class="box-title"><i class="fas fa-clone"></i>{{ 'Objets' }}</h3>
             </div>
             <div class="box-body">
-                <div class="objectListContainer row">
-                    <?php
-                        foreach ($eqLogics as $eqLogic) {
-                            $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
-                            echo '<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">';
-                            echo '<div class="box objectDisplayCard w-icons" style="border-top:3px solid data-eqLogic_id="' . $eqLogic->getId() . '"data-object_name="' . $eqLogic->getHumanName(true, true) . '>';
-                            echo '<a class="box-header with-border cursor">';
-                            echo '</a>';
-                            echo '<div class="box-body">';
-                            echo '<span class="object-summary spacing-left"><img src="' . $plugin->getPathImgIcon() . '" height="105" width="95"/></span>';
-                            echo '</div>';
-                            echo '<div class="box-footer clearfix text-center">';
-                            echo '<a class="btn btn-danger btn-sm pull-right remove bt_removeObject"><i class="fas fa-trash"></i></a>';
-                            echo '<a class="btn btn-info btn-sm pull-left bt_detailsObject"><i class="fas fa-edit"></i></a>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
-                        }
-                        ?>
-                </div>
             </div>
+        </div>
+        <div class="objectListContainer row">
+            <?php
+                foreach ($eqLogics as $eqLogic) {
+                    $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
+                    echo '<div class="col-lg-2 col-md-4 col-sm-4 col-xs-8">';
+                    echo '<div class="box objectDisplayCard w-icons" style="border-top:3px solid" data-eqLogic_id="' . $eqLogic->getId() . '"data-object_name="' . $eqLogic->getHumanName(true, true) . '>';
+                    echo '<a class="box-header with-border cursor">';
+                    echo '</a>';
+                    echo '<div class="box-body">';
+                    echo '<span class="object-summary spacing-left"><img src="' . $plugin->getPathImgIcon() . '" height="105" width="95"/></span>';
+                    echo '</div>';
+                    echo '<div class="box-footer clearfix text-center">';
+                    echo '<a class="btn btn-danger btn-sm pull-right remove bt_removeObject"><i class="fas fa-trash"></i></a>';
+                    echo '<a class="btn btn-info btn-sm pull-left bt_detailsObject"><i class="fas fa-edit"></i></a>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            ?>
         </div>
     </section>
 
