@@ -42,12 +42,30 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 <h3 class="box-title"><i class="fas fa-clone"></i>{{ 'Objets' }}</h3>
             </div>
             <div class="box-body">
-           </div>
-        </div>
-        <div class="objectListContainer row">
+                <div class="objectListContainer row">
+                    <?php
+                        foreach ($eqLogics as $eqLogic) {
+                            $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
+                            echo '<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">';
+                            echo '<div class="box objectDisplayCard w-icons" style="border-top:3px solid data-eqLogic_id="' . $eqLogic->getId() . '"data-object_name="' . $eqLogic->getHumanName(true, true) . '>';
+                            echo '<a class="box-header with-border cursor">';
+                            echo '</a>';
+                            echo '<div class="box-body">';
+                            echo '<span class="object-summary spacing-left"><img src="' . $plugin->getPathImgIcon() . '" height="105" width="95"/></span>';
+                            echo '</div>';
+                            echo '<div class="box-footer clearfix text-center">';
+                            echo '<a class="btn btn-danger btn-sm pull-right remove bt_removeObject"><i class="fas fa-trash"></i></a>';
+                            echo '<a class="btn btn-info btn-sm pull-left bt_detailsObject"><i class="fas fa-edit"></i></a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                        ?>
+                </div>
+            </div>
         </div>
     </section>
-<
+
     <section class="content" style="padding-top: 80px;">
         <div class="row row-overflow">
 
@@ -55,16 +73,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 style="border-left: solid 1px #EEE; padding-left: 25px;">
                 <legend><i class="fa fa-table"></i> {{Mes shutterss}}</legend>
                 <div class="eqLogicThumbnailContainer">
-                    <?php
-                    foreach ($eqLogics as $eqLogic) {
-                        $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
-                        echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="text-align: center; background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;' . $opacity . '" >';
-                        echo '<img src="' . $plugin->getPathImgIcon() . '" height="105" width="95" />';
-                        echo "<br>";
-                        echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;">' . $eqLogic->getHumanName(true, true) . '</span>';
-                        echo '</div>';
-                    }
-                    ?>
                 </div>
             </div>
 
